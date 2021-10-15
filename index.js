@@ -17,6 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
+// sum += i
 
 
 
@@ -28,10 +29,18 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
 
+function summation(num) {
+  /*Your Code Here*/
+  // let sum = [1, 2, 3, 4];
+  let total = 0;
+  
+  for(let i = 0; i <= num; i++) {
+      total += i;
+    }
+  return total;
   }
+  console.log(summation(4));
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -56,9 +65,15 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
+  function animalNames(array){
     /*Your Code Here*/
-  }
+    const displayNames = [];
+
+    const animNames = array.forEach(function (item) {displayNames.push(`name: ${item['animal_name']}, scientific: ${item['scientific_name']}`)});
+    return displayNames;
+}
+console.log(animalNames(zooAnimals));
+  
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -67,19 +82,28 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
+  function lowerCaseNames(array){
     /*Your Code Here*/
+    const lowerC = [];
+    const lowerCase = array.map(function(item){lowerC.push(item['animal_name'].toLowerCase())})
+    return lowerC;
   }
-  
+
+  console.log(lowerCaseNames(zooAnimals))
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
+  function lowPopulationAnimals(array){
     /*Your Code Here*/
+    const lowPop = [];
+
+    const pop = array.filter(function(item){lowPop.push(item['population'] < 5)})
+    return lowPop;
   }
+  console.log(lowPopulationAnimals(zooAnimals))
   
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
