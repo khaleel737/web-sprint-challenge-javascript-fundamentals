@@ -26,13 +26,36 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+.filter: filter executes a callback and checks if the element is true or false, if the element is true it returns it in the returned array and if its false it will exclude it from the results.
+
+.map: map is similar to foreach and filter, yet it takes the array and generates the desired array through its callback function and returns it in a new array on top of the resulting array.
+
+.reduce: reduce takes a call back and two parameters, it takes the sum and accumulator, it sums up the values from the array through a call back and reduces the numbers to 1 number by taking two parameters as arguments, first parameter is the item and the second is the accumulator that returns the sum of the array desired.
+
+
 2. Explain the difference between a callback and a higher order function.
+
+A higher order function is a function that takes other functions as arguments and returns the function its being executed to by using other function above it as its in a lexical scope context.
+
+A callback function is a function that is called upon through passing it within its callback function.
 
 3. Explain what a closure is.
 
+A closure is the combination of a function combined within the same scope (enclosed scope) that execute within their lexical context.(lexical environment).
+
+
 4. Describe the four principles of the 'this' keyword.
 
+1. Implicit Binding: when a function is invoked in an Object using the dot notation.
+2. Explicit Binding: when you force a function to use certain objects through .call(), .bind() and pass in the required objects as parameters.
+3. new Binding: when you return a new bound function from the existing function, when executed it will return the new function with the context of the called function.
+4. Lexical Binding: is when a function is called from a nested function to pass in arguments, parameters or any context to be returned, mostly used in nested functions, nested functions can access outside functions but outside functions cant access nested functions variables, etc.
+
+
 5. Why do we need super() in an extended class?
+
+super is used to call constructors, properties, methods, etc of a parent class.
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
