@@ -17,8 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-// sum += i
-
+"A nested function is placed within a scope that can access variables, local functions, constants, types, that are in the same scope or in other words closing scopes, they simplify data passing between and dont require parameters within them, as they are nested within MyFunction they can access the const internal within nested function as a higher function due to nestedFunction being in the scope of myFunction which gives nestedFunction the ability to access anything in myFunction. "
 
 
 
@@ -32,7 +31,6 @@ For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you ma
 
 function summation(num) {
   /*Your Code Here*/
-  // let sum = [1, 2, 3, 4];
   let total = 0;
   
   for(let i = 0; i <= num; i++) {
